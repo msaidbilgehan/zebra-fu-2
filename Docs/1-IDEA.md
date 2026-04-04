@@ -1,15 +1,8 @@
-# TASK
-
-MODE: BRAINSTORM & PLAN
-AIM: DEVELOP AND IMPROVE IDEA THAN CREATE FINAL PLAN
-SESSION: Q&A AND PLANNING
-PROMPT: Start Q&A session fist, ask questions to user to understand, improve and develop the idea, after everything done, create deep dive plan.
-
-## IDEA
+# IDEA - aidatlar.net
 
 When residents of the building send their maintenance fees to a bank account, they upload the receipt here. The system then extracts details such as the IBAN, sender, and recipient to clearly determine who has paid their fee. End-of-month data such as the total amount collected and the list of those who have not paid is tracked. Outputs such as Excel and PDF reports, as well as receipt details, can be downloaded, helping the building management handle tasks more efficiently.
 
-### Features
+## Features
 
 - Receipt Recognition
 - OCR
@@ -17,7 +10,7 @@ When residents of the building send their maintenance fees to a bank account, th
 - Accounting
 - Notifications, emails, messages
 
-### Tech Stack
+## Tech Stack
 
 - Backend
   - Python Django
@@ -34,14 +27,14 @@ When residents of the building send their maintenance fees to a bank account, th
 - Mobile
   - React Native Cross-Platform IOS and Android App
 
-### User Structure and Roles
+## User Structure and Roles
 
 - System Admin: The one controls and develops the platform. All features, all record, full management available, full control.
 - Residents (Residents / Payers / Tenants): Unit payers, tenant
 - Managers (Building Managers or Property Managers): The one collecting maintenance fees of buildings from every residents
 - Management Company: Residential complex manager company that has their own Accountants
 
-#### Recommended hierarchy
+### Recommended hierarchy
 
 There are two branches in hierarchy. One is for Management Company that can manage multiple buildings or managing residential complex, and other one is the one building managers that can manage only one building and related residents.
 
@@ -57,16 +50,16 @@ There are two branches in hierarchy. One is for Management Company that can mana
       - Apartments
         - Residents / Payers
 
-### Platform Payments
+## Platform Payments
 
 Implement subscription model that is monthly and yearly payment with discount code supported structure. Use one or more payment platform integration.
 
-### Residents Payment Flow
+## Residents Payment Flow
 
-1) Residents transfer to one building bank account, then upload the receipt manually
+1) Residents transfer to one bank account (manager's account for one building or manager company's account for multiple buildings), then upload the receipt manually
 2) Manager upload the receipts manually for the related residents
 
-### Q&A
+## Q&A
 
 - **How should the system identify the payer?**
   - By matching uploaded receipt to a resident/unit manually if OCR is uncertain
