@@ -1,0 +1,186 @@
+<mxfile host="65bd71144e">
+    <diagram name="v1 - Payment Flow" id="payment-flow-v1">
+        <mxGraphModel dx="299" dy="573" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="lane-resident" value="Resident" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fontSize=14;fillColor=#dae8fc;strokeColor=#6c8ebf;horizontal=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="1500" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-system" value="System" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fontSize=14;fillColor=#fff2cc;strokeColor=#d6b656;horizontal=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="240" width="1500" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-manager" value="Manager" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fontSize=14;fillColor=#d5e8d4;strokeColor=#82b366;horizontal=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="440" width="1500" height="200" as="geometry"/>
+                </mxCell>
+                <mxCell id="lane-accountant" value="Accountant" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;fontSize=14;fillColor=#e1d5e7;strokeColor=#9673a6;horizontal=0;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="640" width="1500" height="160" as="geometry"/>
+                </mxCell>
+                <mxCell id="r-start" value="" style="ellipse;fillColor=#000000;strokeColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="110" y="120" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="r-pay" value="Pay maintenance fee&#xa;via bank transfer" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="105" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="r-open" value="Open self-service page&#xa;(magic link / unit code)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="105" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="r-upload" value="Upload receipt&#xa;(image / PDF)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="105" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="r-confirm" value="Receive payment&#xa;confirmation email" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="105" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="r-reminder" value="Receive reminder&#xa;(SMS / WhatsApp / Email)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;dashed=1;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1330" y="105" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s-store" value="Store receipt&#xa;&amp; attach to unit" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="310" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s-notify" value="Notify manager&#xa;(new receipt)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="310" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s-status" value="Update payment&#xa;status board" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="310" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s-send-confirm" value="Send confirmation&#xa;to resident" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="385" width="160" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="s-send-reminder" value="Send bulk reminders&#xa;to unpaid residents" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1330" y="310" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="s-db" value="PostgreSQL&#xa;Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=10;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="645" y="390" width="100" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-upload" value="Upload receipt&#xa;on behalf of resident" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="620" y="515" width="150" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-review" value="Review receipt&#xa;on dashboard" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="515" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-decision" value="Approve?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="505" width="80" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-approved" value="Mark as&#xa;PAID" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="515" width="160" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-rejected" value="Flag / reject&#xa;(notify resident)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="980" y="610" width="120" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-remind" value="One-click:&#xa;Send reminders&#xa;to unpaid" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="1330" y="515" width="170" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-report" value="Generate&#xa;month-end report&#xa;(PDF / Excel)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="515" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="m-doc" value="Monthly Report&#xa;PDF / Excel" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=0.15;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="510" width="140" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="a-portal" value="View read-only&#xa;accountant portal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="700" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="a-export" value="Export financial&#xa;data &amp; reports" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="700" width="140" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-start" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="r-start" target="r-pay" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-r1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="r-pay" target="r-open" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-r2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="r-open" target="r-upload" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-r-upload" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;" parent="1" source="r-upload" target="s-store" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-m-upload" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;dashed=1;" parent="1" source="m-upload" target="s-store" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="s-store" target="s-notify" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s-db" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#999999;" parent="1" source="s-store" target="s-db" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s-notify" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;" parent="1" source="s-notify" target="m-review" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-m1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="m-review" target="m-decision" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-m-yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82b366;" parent="1" source="m-decision" target="m-approved" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-m-yes-label" value="Yes" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#82b366;" parent="e-m-yes" vertex="1" connectable="0">
+                    <mxGeometry x="-0.3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-m-no" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;" parent="1" source="m-decision" target="m-rejected" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-m-no-label" value="No" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontStyle=1;fontColor=#b85450;" parent="e-m-no" vertex="1" connectable="0">
+                    <mxGeometry x="-0.3" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-m-approved-status" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="m-approved" target="s-status" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1160" y="480"/>
+                            <mxPoint x="1100" y="480"/>
+                            <mxPoint x="1100" y="340"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-s-confirm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="s-status" target="s-send-confirm" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s-to-r-confirm" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6c8ebf;" parent="1" source="s-send-confirm" target="r-confirm" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="1300" y="410"/>
+                            <mxPoint x="1300" y="135"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e-m-remind" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#d6b656;" parent="1" source="m-remind" target="s-send-reminder" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-s-to-r-remind" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6c8ebf;" parent="1" source="s-send-reminder" target="r-reminder" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-m-report" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="m-report" target="m-doc" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-a-portal" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#9673a6;dashed=1;" parent="1" source="m-doc" target="a-portal" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e-a-export" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="a-portal" target="a-export" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="title" value="aidatlar.net — v1 Payment Flow" style="text;html=1;fontSize=20;fontStyle=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="70" y="5" width="400" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#999999;dashed=1;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="830" width="500" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-title" value="Legend" style="text;html=1;fontSize=12;fontStyle=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="835" width="80" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-solid" value="— Solid line: primary flow" style="text;html=1;fontSize=11;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="860" width="200" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-dashed" value="- - Dashed line: alternative / secondary flow" style="text;html=1;fontSize=11;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="880" width="280" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="legend-alt" value="Manager can upload receipts on behalf of residents (dashed arrow)" style="text;html=1;fontSize=11;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+                    <mxGeometry x="55" y="900" width="450" height="20" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
